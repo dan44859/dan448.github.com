@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About JS </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background: rgba(0, 172, 230, 0.3);
+            color: #4dc43c;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: color 0.1s ease;
+        }
+
+        header nav a:hover {
+            color: #ffff00;
+        }
+        .logo {
+            position: absolute;
+            top: 1px;
+            left: 20px;
+            height: 60px;
+            height: 4vh; /* Ajustez la hauteur du logo */
+            margin-right: 50px; /* Espace entre le logo et le reste du contenu */
+        }
+        .hero {
+            height: 70vh;
+            background: url('hotel acceuil.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60%;
+            background: rgba(0, 0, 0, 0.01);
+            backdrop-filter: blur(2px);
+        }
+        .hero h1 {
+            color: #f2f2f2;
+            font-size: 70px;
+            text-align: center;
+            z-index: 5;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 0px 0 10px; /* Espace pour le header */
+        }
+        .intro {
+            text-align: center;
+            margin: 0 0 0 40px ;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+        }
+        .service {
+            width: 30%;
+            text-align: center;
+        }
+        .service img {
+            width: 50px;
+            height: 50px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+          /* Image de fond desription */
+        .background-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    
+        }
+
+        /* Image de fond floutée */
+        .background-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(0px);
+            background-image: url('beach.jpg'); /* Chemin de votre image */
+             background-size: cover; /* Ou 100% 100% */
+            background-position: center;
+            width: 100%;
+            height: 100%
+            filter: blur(3px); /* Degré de flou */
+            z-index: -1;
+        }
+        
+        
+        
+        .contenue {
+  position: relative;
+  height: 100vh; /* Ajustez cette valeur si nécessaire */
+}
+
+.content {
+  position: relative;
+  z-index: -1; /* Pour placer le contenu au-dessus du flou */
+  padding: 0px; /* Espacement autour du contenu */
+}
+
+        .contenue::after {
+  content: "";
+  position: absolute;
+  top: -3%; /* Démarre à partir de la moitié de la page */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('beach.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px); /* Ajustez le flou selon vos préférences */
+  z-index: -1; /* Pour placer le contenu au-dessus du flou */
+}
+
+
+
+.product {
+            border: 2px solid #ddd;
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 30%;
+            display: inline-block;
+            vertical-align: top;
+            box-sizing: border-box;
+            
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+        .product h3 {
+            margin: 10px 0;
+        }
+        .product p {
+            margin: 10px 0;
+        }
+        .product button {
+            background-color: #33cc33;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .product button:hover {
+            background-color: #555;
+        }
+        
+        
+        /*bouton*/
+        .button-link {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #33CC33; /* Couleur du bouton */
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.2s ease;
+        }
+
+        .button-link:hover {
+            background-color: #258e25; /* Couleur du bouton au survol */
+        }
+        
+        
+        
+        
+        footer {
+                background: rgba(128, 128, 128, 0.6);
+                
+            color: #fff;
+            text-align: center;
+            padding: 0px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+             <img src="LOGO 2.png" class="logo">
+            <a href="About.HTML">Accueil</a>
+            <a href="search.html">Recherche</a>
+            <a href="rooms.html">Chambres</a>
+            <a href="booking.html">Réservation</a>
+            <a href="confirmation.html">Confirmation</a>
+        </nav>
+    </header>
+    <!-- Section Hero avec image floutée et titre -->
+    <div class="hero">
+        <h1>Bienvenue à l'Hôtel JS</h1>
+        
+    </div>
+
+    <!-- Contenu Principal -->
+    <div class="contenue">
+        <div class="intro">
+            <h1>Découvrez le confort et l'élégance</h1>
+            <p>Bienvenue à JS HOTEL, où l'élégance rencontre l'hospitalité authentique. Implantés dans les plus belles destinations de Madagascar, nos hôtels offrent un cadre luxueux, confortable, et une expérience culinaire unique.</p>
+            
+        </div>
+        <div class="services">
+            <div class="service">
+                <img src="bed.png" alt="CHAMBRE CONFORT">
+                <h3>CONFORT</h3>
+                <p>BINGALOW & CHAMBRE LUXE</p>
+            </div>
+            <div class="service">
+                <img src="spa.png" alt="Service 2">
+                <h3>SPA & DETENTE</h3>
+                <p>MASSAGE & YOGA</p>
+            </div>
+            <div class="service">
+                <img src="pool.png" alt="Service 3">
+                <h3>PISCINE</h3>
+                <p>PISCINE </p>
+            </div>
+            <div class="service">
+                <img src="restaurant.png" alt="Service 3">
+                <h3>RESTAURANT</h3>
+                <p>Plats très savoureux</p>
+            </div>
+        </div>
+        
+        
+        
+                <div class="product">
+                    <img src="hotel 2.jpg" alt="Product 1">
+                    <h3>BINGALOW FAMILIALE</h3>
+                    <p>3 LitS 2 places & 3 chambres</p>
+                    <p>90.000 MGA</p>
+                    <a href="booking.html" class="button-link">Reserver</a>   
+                    
+                </div>
+                <div class="product">
+                    <img src="hotel 5.jpg" alt="Product 2">
+                    <h3>BINGALOW</h3>
+                    <p>Lit 2places & 2 chambres </p>
+                    <p>140.000 MGA</p>
+                     <a href="booking.html" class="button-link">Reserver</a>   
+                </div>
+                <div class="product">
+                    <img src="hotel 3.jpg" alt="Product 3">
+                    <h3>APPARTEMENT</h3>
+                    <p>2 Chambre & un lit 2 places</p>
+                    <p>199.000 MGA</p>
+                    
+                    
+      <a href="booking.html" class="button-link">Reserver</a>                
+                    
+                </div>
+        
+        
+    
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contactez-nous : info@JShotel.com | Suivez-nous sur <a href="#">Facebook</a> et <a href="#">Twitter</a></p>
+    </footer>
+</body>
+</html>
