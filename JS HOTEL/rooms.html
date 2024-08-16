@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails des Chambres - JS Hôtel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background: rgba(0, 172, 230, 0.3);
+            color: #4dc43c;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: color 0.1s ease;
+        }
+
+        header nav a:hover {
+            color: #ffff00;
+        }
+        .logo {
+            position: absolute;
+            top: 1px;
+            left: 20px;
+            height: 60px;
+            height: 4vh;
+            margin-right: 50px;
+        }
+
+        .hero {
+            height: 40vh;
+            background: url('./hotel 6.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero h1 {
+            color: #f2f2f2;
+            font-size: 50px;
+            text-align: center;
+            z-index: 5;
+        }
+
+        .container {
+            width: 80%;
+            margin: 100px auto;
+            padding: 20px 0;
+        }
+
+        .room {
+            display: flex;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+        }
+
+        .room img {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .room-details {
+            flex: 1;
+        }
+
+        .room-details h3 {
+            margin: 0 0 10px;
+            color: #4dc43c;
+        }
+
+        .room-details p {
+            margin: 0 0 10px;
+        }
+
+        .room-details ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+
+        .room-details ul li {
+            margin-bottom: 5px;
+        }
+
+        .price {
+            font-weight: bold;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+        }
+
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: #f2f2f2;
+        }
+
+        .comparison-table td {
+            text-align: center;
+        }
+
+   
+        .button-link {
+            
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #33CC33; 
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.2s ease;
+        }
+
+        .button-link:hover {
+           
+            background-color: #258e25; 
+        }
+        
+        
+        
+        footer {
+            background: rgba(128, 128, 128, 0.6);
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <img src="./LOGO 2.png" class="logo">
+            <a href="Index.HTML">Accueil</a>
+            <a href="search.html">Recherche</a>
+            <a href="rooms.html">Chambres</a>
+            <a href="booking.html">Réservation</a>
+            <a href="confirmation.html">Confirmation</a>
+        </nav>
+    </header>
+
+    
+    <div class="hero">
+        <h1>Détails des Chambres</h1>
+    </div>
+
+
+    <div class="container">
+       
+        <div class="room">
+            <img src="./hotel 2.jpg" alt="Bungalow Familial">
+            <div class="room-details">
+                <h3>Bungalow Familiale</h3>
+                <p>Idéal pour les familles, ce bungalow spacieux offre :</p>
+                <ul>
+                    <li>3 Lits 2 places</li>
+                    <li>3 chambres séparées</li>
+                    <li>Climatisation</li>
+                    <li>Wi-Fi gratuit</li>
+                    <li>Vue sur le jardin</li>
+                </ul>
+                <p class="price">Prix : 90.000 MGA</p>
+                <a href="booking.html" class="button-link">Reserver</a>  
+            </div>
+        </div>
+        
+        <div class="room">
+            <img src="./chambre 1.jpg" alt="Bungalow Familial">
+            <div class="room-details">
+                <h3>Appartement familiale</h3>
+                <p>Idéal pour les familles, cette appartement spacieux offre :</p>
+                <ul>
+                    <li>3 Lits 2 places</li>
+                    <li>3 chambres séparées</li>
+                    <li>Climatisation</li>
+                    <li>Wi-Fi gratuit</li>
+                    <li>Vue sur le jardin</li>
+                </ul>
+                <p class="price">Prix : 120.000 MGA</p>
+                <a href="booking.html" class="button-link">Reserver</a>  
+            </div>
+        </div>
+        
+        <div class="room">
+            <img src="./chambre6.jpg" alt="Bungalow Familial">
+            <div class="room-details">
+                <h3>Villa F6</h3>
+                <p>Idéal pour les familles, offre :</p>
+                <ul>
+                    <li>5 Lits 2 places</li>
+                    <li>7 chambres séparées</li>
+                    <li>Climatisation</li>
+                    <li>Wi-Fi gratuit</li>
+                    <li>Piscine Chaufé</li>
+                    <li>Vue sur le jardin</li>
+                </ul>
+                <p class="price">Prix : 200.000 MGA</p>
+                <a href="booking.html" class="button-link">Reserver</a>  
+            </div>
+        </div>
+
+        <div class="room">
+            <img src="./hotel 5.jpg" alt="Bungalow">
+            <div class="room-details">
+                <h3>Bungalow</h3>
+                <p>Un espace intime et confortable pour 2 personnes :</p>
+                <ul>
+                    <li>Lit 2 places</li>
+                    <li>2 chambres</li>
+                    <li>Climatisation</li>
+                    <li>Wi-Fi gratuit</li>
+                    <li>Vue sur la piscine</li>
+                </ul>
+                <p class="price">Prix : 140.000 MGA</p>
+                <a href="booking.html" class="button-link">Reserver</a>  
+            </div>
+        </div>
+
+        <div class="room">
+            <img src="./hotel 3.jpg" alt="Appartement">
+            <div class="room-details">
+                <h3>Appartement</h3>
+                <p>Un appartement moderne et spacieux pour un séjour prolongé :</p>
+                <ul>
+                    <li>2 Chambres</li>
+                    <li>1 Lit 2 places</li>
+                    <li>Cuisine équipée</li>
+                    <li>Wi-Fi gratuit</li>
+                    <li>Vue sur la mer</li>
+                </ul>
+                <p class="price">Prix : 199.000 MGA</p>
+                <a href="booking.html" class="button-link">Reserver</a>  
+            </div>
+        </div>
+        
+
+
+        
+        <h2>Comparaison des Chambres</h2>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Caractéristiques</th>
+                    <th>Bungalow Familial</th>
+                    <th>Bungalow</th>
+                    <th>Appartement</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nombre de Lits</td>
+                    <td>3 Lits 2 places</td>
+                    <td>1 Lit 2 places</td>
+                    <td>1 Lit 2 places</td>
+                </tr>
+                <tr>
+                    <td>Nombre de Chambres</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Climatisation</td>
+                    <td>Oui</td>
+                    <td>Oui</td>
+                    <td>Oui</td>
+                </tr>
+                <tr>
+                    <td>Wi-Fi</td>
+                    <td>Gratuit</td>
+                    <td>Gratuit</td>
+                    <td>Gratuit</td>
+                </tr>
+                <tr>
+                    <td>Vue</td>
+                    <td>Jardin</td>
+                    <td>Piscine</td>
+                    <td>Mer</td>
+                </tr>
+                <tr>
+                    <td>Prix</td>
+                    <td>90.000 MGA</td>
+                    <td>140.000 MGA</td>
+                    <td>199.000 MGA</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+  
+    <footer>
+        <p>Contactez-nous : info@JShotel.com | Suivez-nous sur <a href="#">Facebook</a> et <a href="#">Twitter</a></p>
+    </footer>
+</body>
+</html>
